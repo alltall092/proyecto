@@ -1,0 +1,1416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{90B03AD1-E759-49C5-9E74-5E10C0851A28}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>paginaweb</RootNamespace>
+    <AssemblyName>paginaweb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.3.0.20105.1\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.1.0.20105.408\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.1.0.20105.408\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AllowAnonymous.cs" />
+    <Compile Include="Controllers\c.cs" />
+    <Compile Include="Controllers\controladorController.cs" />
+    <Compile Include="Controllers\pass1.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\comentarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pagina.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pagina.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pagina.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pagina.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pagina.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\pagina1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>pagina.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\registrarse.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\paginaweb.dll" />
+    <Content Include="bin\paginaweb.pdb" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap.css" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\bootstrap-3.3.7-dist\js\bootstrap.js" />
+    <Content Include="Content\bootstrap-3.3.7-dist\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap-3.3.7-dist\js\jquery.js" />
+    <Content Include="Content\bootstrap-3.3.7-dist\js\npm.js" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Content\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="Content\high\code\css\highcharts.css" />
+    <Content Include="Content\high\code\highcharts-3d.js" />
+    <Content Include="Content\high\code\highcharts-3d.src.js" />
+    <Content Include="Content\high\code\highcharts-more.js" />
+    <Content Include="Content\high\code\highcharts-more.src.js" />
+    <Content Include="Content\high\code\highcharts.js" />
+    <Content Include="Content\high\code\highcharts.src.js" />
+    <Content Include="Content\high\code\js\highcharts-3d.js" />
+    <Content Include="Content\high\code\js\highcharts-3d.src.js" />
+    <Content Include="Content\high\code\js\highcharts-more.js" />
+    <Content Include="Content\high\code\js\highcharts-more.src.js" />
+    <Content Include="Content\high\code\js\highcharts.js" />
+    <Content Include="Content\high\code\js\highcharts.src.js" />
+    <Content Include="Content\high\code\js\modules\accessibility.js" />
+    <Content Include="Content\high\code\js\modules\accessibility.src.js" />
+    <Content Include="Content\high\code\js\modules\annotations.js" />
+    <Content Include="Content\high\code\js\modules\annotations.src.js" />
+    <Content Include="Content\high\code\js\modules\boost-canvas.js" />
+    <Content Include="Content\high\code\js\modules\boost-canvas.src.js" />
+    <Content Include="Content\high\code\js\modules\boost.js" />
+    <Content Include="Content\high\code\js\modules\boost.src.js" />
+    <Content Include="Content\high\code\js\modules\broken-axis.js" />
+    <Content Include="Content\high\code\js\modules\broken-axis.src.js" />
+    <Content Include="Content\high\code\js\modules\bullet.js" />
+    <Content Include="Content\high\code\js\modules\bullet.src.js" />
+    <Content Include="Content\high\code\js\modules\data.js" />
+    <Content Include="Content\high\code\js\modules\data.src.js" />
+    <Content Include="Content\high\code\js\modules\drag-panes.js" />
+    <Content Include="Content\high\code\js\modules\drag-panes.src.js" />
+    <Content Include="Content\high\code\js\modules\drilldown.js" />
+    <Content Include="Content\high\code\js\modules\drilldown.src.js" />
+    <Content Include="Content\high\code\js\modules\export-data.js" />
+    <Content Include="Content\high\code\js\modules\export-data.src.js" />
+    <Content Include="Content\high\code\js\modules\exporting.js" />
+    <Content Include="Content\high\code\js\modules\exporting.src.js" />
+    <Content Include="Content\high\code\js\modules\funnel.js" />
+    <Content Include="Content\high\code\js\modules\funnel.src.js" />
+    <Content Include="Content\high\code\js\modules\gantt.js" />
+    <Content Include="Content\high\code\js\modules\gantt.src.js" />
+    <Content Include="Content\high\code\js\modules\grid-axis.js" />
+    <Content Include="Content\high\code\js\modules\grid-axis.src.js" />
+    <Content Include="Content\high\code\js\modules\heatmap.js" />
+    <Content Include="Content\high\code\js\modules\heatmap.src.js" />
+    <Content Include="Content\high\code\js\modules\histogram-bellcurve.js" />
+    <Content Include="Content\high\code\js\modules\histogram-bellcurve.src.js" />
+    <Content Include="Content\high\code\js\modules\item-series.js" />
+    <Content Include="Content\high\code\js\modules\item-series.src.js" />
+    <Content Include="Content\high\code\js\modules\no-data-to-display.js" />
+    <Content Include="Content\high\code\js\modules\no-data-to-display.src.js" />
+    <Content Include="Content\high\code\js\modules\offline-exporting.js" />
+    <Content Include="Content\high\code\js\modules\offline-exporting.src.js" />
+    <Content Include="Content\high\code\js\modules\oldie.js" />
+    <Content Include="Content\high\code\js\modules\oldie.src.js" />
+    <Content Include="Content\high\code\js\modules\overlapping-datalabels.js" />
+    <Content Include="Content\high\code\js\modules\overlapping-datalabels.src.js" />
+    <Content Include="Content\high\code\js\modules\parallel-coordinates.js" />
+    <Content Include="Content\high\code\js\modules\parallel-coordinates.src.js" />
+    <Content Include="Content\high\code\js\modules\pareto.js" />
+    <Content Include="Content\high\code\js\modules\pareto.src.js" />
+    <Content Include="Content\high\code\js\modules\sankey.js" />
+    <Content Include="Content\high\code\js\modules\sankey.src.js" />
+    <Content Include="Content\high\code\js\modules\series-label.js" />
+    <Content Include="Content\high\code\js\modules\series-label.src.js" />
+    <Content Include="Content\high\code\js\modules\solid-gauge.js" />
+    <Content Include="Content\high\code\js\modules\solid-gauge.src.js" />
+    <Content Include="Content\high\code\js\modules\static-scale.js" />
+    <Content Include="Content\high\code\js\modules\static-scale.src.js" />
+    <Content Include="Content\high\code\js\modules\stock.js" />
+    <Content Include="Content\high\code\js\modules\stock.src.js" />
+    <Content Include="Content\high\code\js\modules\streamgraph.js" />
+    <Content Include="Content\high\code\js\modules\streamgraph.src.js" />
+    <Content Include="Content\high\code\js\modules\sunburst.js" />
+    <Content Include="Content\high\code\js\modules\sunburst.src.js" />
+    <Content Include="Content\high\code\js\modules\tilemap.js" />
+    <Content Include="Content\high\code\js\modules\tilemap.src.js" />
+    <Content Include="Content\high\code\js\modules\treemap.js" />
+    <Content Include="Content\high\code\js\modules\treemap.src.js" />
+    <Content Include="Content\high\code\js\modules\variable-pie.js" />
+    <Content Include="Content\high\code\js\modules\variable-pie.src.js" />
+    <Content Include="Content\high\code\js\modules\variwide.js" />
+    <Content Include="Content\high\code\js\modules\variwide.src.js" />
+    <Content Include="Content\high\code\js\modules\vector.js" />
+    <Content Include="Content\high\code\js\modules\vector.src.js" />
+    <Content Include="Content\high\code\js\modules\windbarb.js" />
+    <Content Include="Content\high\code\js\modules\windbarb.src.js" />
+    <Content Include="Content\high\code\js\modules\wordcloud.js" />
+    <Content Include="Content\high\code\js\modules\wordcloud.src.js" />
+    <Content Include="Content\high\code\js\modules\xrange.js" />
+    <Content Include="Content\high\code\js\modules\xrange.src.js" />
+    <Content Include="Content\high\code\js\themes\avocado.js" />
+    <Content Include="Content\high\code\js\themes\avocado.src.js" />
+    <Content Include="Content\high\code\js\themes\dark-blue.js" />
+    <Content Include="Content\high\code\js\themes\dark-blue.src.js" />
+    <Content Include="Content\high\code\js\themes\dark-green.js" />
+    <Content Include="Content\high\code\js\themes\dark-green.src.js" />
+    <Content Include="Content\high\code\js\themes\dark-unica.js" />
+    <Content Include="Content\high\code\js\themes\dark-unica.src.js" />
+    <Content Include="Content\high\code\js\themes\gray.js" />
+    <Content Include="Content\high\code\js\themes\gray.src.js" />
+    <Content Include="Content\high\code\js\themes\grid-light.js" />
+    <Content Include="Content\high\code\js\themes\grid-light.src.js" />
+    <Content Include="Content\high\code\js\themes\grid.js" />
+    <Content Include="Content\high\code\js\themes\grid.src.js" />
+    <Content Include="Content\high\code\js\themes\sand-signika.js" />
+    <Content Include="Content\high\code\js\themes\sand-signika.src.js" />
+    <Content Include="Content\high\code\js\themes\skies.js" />
+    <Content Include="Content\high\code\js\themes\skies.src.js" />
+    <Content Include="Content\high\code\js\themes\sunset.js" />
+    <Content Include="Content\high\code\js\themes\sunset.src.js" />
+    <Content Include="Content\high\code\lib\canvg.js" />
+    <Content Include="Content\high\code\lib\canvg.src.js" />
+    <Content Include="Content\high\code\lib\jspdf.js" />
+    <Content Include="Content\high\code\lib\jspdf.src.js" />
+    <Content Include="Content\high\code\lib\rgbcolor.js" />
+    <Content Include="Content\high\code\lib\rgbcolor.src.js" />
+    <Content Include="Content\high\code\lib\svg2pdf.js" />
+    <Content Include="Content\high\code\lib\svg2pdf.src.js" />
+    <Content Include="Content\high\code\modules\accessibility.js" />
+    <Content Include="Content\high\code\modules\accessibility.src.js" />
+    <Content Include="Content\high\code\modules\annotations.js" />
+    <Content Include="Content\high\code\modules\annotations.src.js" />
+    <Content Include="Content\high\code\modules\boost-canvas.js" />
+    <Content Include="Content\high\code\modules\boost-canvas.src.js" />
+    <Content Include="Content\high\code\modules\boost.js" />
+    <Content Include="Content\high\code\modules\boost.src.js" />
+    <Content Include="Content\high\code\modules\broken-axis.js" />
+    <Content Include="Content\high\code\modules\broken-axis.src.js" />
+    <Content Include="Content\high\code\modules\bullet.js" />
+    <Content Include="Content\high\code\modules\bullet.src.js" />
+    <Content Include="Content\high\code\modules\data.js" />
+    <Content Include="Content\high\code\modules\data.src.js" />
+    <Content Include="Content\high\code\modules\drag-panes.js" />
+    <Content Include="Content\high\code\modules\drag-panes.src.js" />
+    <Content Include="Content\high\code\modules\drilldown.js" />
+    <Content Include="Content\high\code\modules\drilldown.src.js" />
+    <Content Include="Content\high\code\modules\export-data.js" />
+    <Content Include="Content\high\code\modules\export-data.src.js" />
+    <Content Include="Content\high\code\modules\exporting.js" />
+    <Content Include="Content\high\code\modules\exporting.src.js" />
+    <Content Include="Content\high\code\modules\funnel.js" />
+    <Content Include="Content\high\code\modules\funnel.src.js" />
+    <Content Include="Content\high\code\modules\gantt.js" />
+    <Content Include="Content\high\code\modules\gantt.src.js" />
+    <Content Include="Content\high\code\modules\grid-axis.js" />
+    <Content Include="Content\high\code\modules\grid-axis.src.js" />
+    <Content Include="Content\high\code\modules\heatmap.js" />
+    <Content Include="Content\high\code\modules\heatmap.src.js" />
+    <Content Include="Content\high\code\modules\histogram-bellcurve.js" />
+    <Content Include="Content\high\code\modules\histogram-bellcurve.src.js" />
+    <Content Include="Content\high\code\modules\item-series.js" />
+    <Content Include="Content\high\code\modules\item-series.src.js" />
+    <Content Include="Content\high\code\modules\no-data-to-display.js" />
+    <Content Include="Content\high\code\modules\no-data-to-display.src.js" />
+    <Content Include="Content\high\code\modules\offline-exporting.js" />
+    <Content Include="Content\high\code\modules\offline-exporting.src.js" />
+    <Content Include="Content\high\code\modules\oldie.js" />
+    <Content Include="Content\high\code\modules\oldie.src.js" />
+    <Content Include="Content\high\code\modules\overlapping-datalabels.js" />
+    <Content Include="Content\high\code\modules\overlapping-datalabels.src.js" />
+    <Content Include="Content\high\code\modules\parallel-coordinates.js" />
+    <Content Include="Content\high\code\modules\parallel-coordinates.src.js" />
+    <Content Include="Content\high\code\modules\pareto.js" />
+    <Content Include="Content\high\code\modules\pareto.src.js" />
+    <Content Include="Content\high\code\modules\sankey.js" />
+    <Content Include="Content\high\code\modules\sankey.src.js" />
+    <Content Include="Content\high\code\modules\series-label.js" />
+    <Content Include="Content\high\code\modules\series-label.src.js" />
+    <Content Include="Content\high\code\modules\solid-gauge.js" />
+    <Content Include="Content\high\code\modules\solid-gauge.src.js" />
+    <Content Include="Content\high\code\modules\static-scale.js" />
+    <Content Include="Content\high\code\modules\static-scale.src.js" />
+    <Content Include="Content\high\code\modules\stock.js" />
+    <Content Include="Content\high\code\modules\stock.src.js" />
+    <Content Include="Content\high\code\modules\streamgraph.js" />
+    <Content Include="Content\high\code\modules\streamgraph.src.js" />
+    <Content Include="Content\high\code\modules\sunburst.js" />
+    <Content Include="Content\high\code\modules\sunburst.src.js" />
+    <Content Include="Content\high\code\modules\tilemap.js" />
+    <Content Include="Content\high\code\modules\tilemap.src.js" />
+    <Content Include="Content\high\code\modules\treemap.js" />
+    <Content Include="Content\high\code\modules\treemap.src.js" />
+    <Content Include="Content\high\code\modules\variable-pie.js" />
+    <Content Include="Content\high\code\modules\variable-pie.src.js" />
+    <Content Include="Content\high\code\modules\variwide.js" />
+    <Content Include="Content\high\code\modules\variwide.src.js" />
+    <Content Include="Content\high\code\modules\vector.js" />
+    <Content Include="Content\high\code\modules\vector.src.js" />
+    <Content Include="Content\high\code\modules\windbarb.js" />
+    <Content Include="Content\high\code\modules\windbarb.src.js" />
+    <Content Include="Content\high\code\modules\wordcloud.js" />
+    <Content Include="Content\high\code\modules\wordcloud.src.js" />
+    <Content Include="Content\high\code\modules\xrange.js" />
+    <Content Include="Content\high\code\modules\xrange.src.js" />
+    <Content Include="Content\high\code\themes\avocado.js" />
+    <Content Include="Content\high\code\themes\avocado.src.js" />
+    <Content Include="Content\high\code\themes\dark-blue.js" />
+    <Content Include="Content\high\code\themes\dark-blue.src.js" />
+    <Content Include="Content\high\code\themes\dark-green.js" />
+    <Content Include="Content\high\code\themes\dark-green.src.js" />
+    <Content Include="Content\high\code\themes\dark-unica.js" />
+    <Content Include="Content\high\code\themes\dark-unica.src.js" />
+    <Content Include="Content\high\code\themes\gray.js" />
+    <Content Include="Content\high\code\themes\gray.src.js" />
+    <Content Include="Content\high\code\themes\grid-light.js" />
+    <Content Include="Content\high\code\themes\grid-light.src.js" />
+    <Content Include="Content\high\code\themes\grid.js" />
+    <Content Include="Content\high\code\themes\grid.src.js" />
+    <Content Include="Content\high\code\themes\sand-signika.js" />
+    <Content Include="Content\high\code\themes\sand-signika.src.js" />
+    <Content Include="Content\high\code\themes\skies.js" />
+    <Content Include="Content\high\code\themes\skies.src.js" />
+    <Content Include="Content\high\code\themes\sunset.js" />
+    <Content Include="Content\high\code\themes\sunset.src.js" />
+    <Content Include="Content\high\examples\3d-column-interactive\index.htm" />
+    <Content Include="Content\high\examples\3d-column-null-values\index.htm" />
+    <Content Include="Content\high\examples\3d-column-stacking-grouping\index.htm" />
+    <Content Include="Content\high\examples\3d-pie-donut\index.htm" />
+    <Content Include="Content\high\examples\3d-pie\index.htm" />
+    <Content Include="Content\high\examples\3d-scatter-draggable\index.htm" />
+    <Content Include="Content\high\examples\annotations\index.htm" />
+    <Content Include="Content\high\examples\area-basic\index.htm" />
+    <Content Include="Content\high\examples\area-inverted\index.htm" />
+    <Content Include="Content\high\examples\area-missing\index.htm" />
+    <Content Include="Content\high\examples\area-negative\index.htm" />
+    <Content Include="Content\high\examples\area-stacked-percent\index.htm" />
+    <Content Include="Content\high\examples\area-stacked\index.htm" />
+    <Content Include="Content\high\examples\arearange-line\index.htm" />
+    <Content Include="Content\high\examples\arearange\index.htm" />
+    <Content Include="Content\high\examples\areaspline\index.htm" />
+    <Content Include="Content\high\examples\bar-basic\index.htm" />
+    <Content Include="Content\high\examples\bar-negative-stack\index.htm" />
+    <Content Include="Content\high\examples\bar-stacked\index.htm" />
+    <Content Include="Content\high\examples\bellcurve\index.htm" />
+    <Content Include="Content\high\examples\box-plot\index.htm" />
+    <Content Include="Content\high\examples\bubble-3d\index.htm" />
+    <Content Include="Content\high\examples\bubble\index.htm" />
+    <Content Include="Content\high\examples\bullet-graph\index.htm" />
+    <Content Include="Content\high\examples\chart-update\index.htm" />
+    <Content Include="Content\high\examples\column-basic\index.htm" />
+    <Content Include="Content\high\examples\column-drilldown\index.htm" />
+    <Content Include="Content\high\examples\column-negative\index.htm" />
+    <Content Include="Content\high\examples\column-parsed\index.htm" />
+    <Content Include="Content\high\examples\column-placement\index.htm" />
+    <Content Include="Content\high\examples\column-rotated-labels\index.htm" />
+    <Content Include="Content\high\examples\column-stacked-and-grouped\index.htm" />
+    <Content Include="Content\high\examples\column-stacked-percent\index.htm" />
+    <Content Include="Content\high\examples\column-stacked\index.htm" />
+    <Content Include="Content\high\examples\columnrange\index.htm" />
+    <Content Include="Content\high\examples\combo-dual-axes\index.htm" />
+    <Content Include="Content\high\examples\combo-meteogram\index.htm" />
+    <Content Include="Content\high\examples\combo-multi-axes\index.htm" />
+    <Content Include="Content\high\examples\combo-regression\index.htm" />
+    <Content Include="Content\high\examples\combo-timeline\index.htm" />
+    <Content Include="Content\high\examples\combo\index.htm" />
+    <Content Include="Content\high\examples\dynamic-click-to-add\index.htm" />
+    <Content Include="Content\high\examples\dynamic-master-detail\index.htm" />
+    <Content Include="Content\high\examples\dynamic-update\index.htm" />
+    <Content Include="Content\high\examples\error-bar\index.htm" />
+    <Content Include="Content\high\examples\funnel\index.htm" />
+    <Content Include="Content\high\examples\gauge-activity\index.htm" />
+    <Content Include="Content\high\examples\gauge-clock\index.htm" />
+    <Content Include="Content\high\examples\gauge-dual\index.htm" />
+    <Content Include="Content\high\examples\gauge-solid\index.htm" />
+    <Content Include="Content\high\examples\gauge-speedometer\index.htm" />
+    <Content Include="Content\high\examples\gauge-vu-meter\index.htm" />
+    <Content Include="Content\high\examples\heatmap-canvas\index.htm" />
+    <Content Include="Content\high\examples\heatmap\index.htm" />
+    <Content Include="Content\high\examples\histogram\index.htm" />
+    <Content Include="Content\high\examples\honeycomb-usa\index.htm" />
+    <Content Include="Content\high\examples\item-series\index.htm" />
+    <Content Include="Content\high\examples\line-ajax\index.htm" />
+    <Content Include="Content\high\examples\line-basic\index.htm" />
+    <Content Include="Content\high\examples\line-boost\index.htm" />
+    <Content Include="Content\high\examples\line-labels\index.htm" />
+    <Content Include="Content\high\examples\line-log-axis\index.htm" />
+    <Content Include="Content\high\examples\line-time-series\index.htm" />
+    <Content Include="Content\high\examples\parallel-coordinates\index.htm" />
+    <Content Include="Content\high\examples\pareto\index.htm" />
+    <Content Include="Content\high\examples\pie-basic\index.htm" />
+    <Content Include="Content\high\examples\pie-donut\index.htm" />
+    <Content Include="Content\high\examples\pie-drilldown\index.htm" />
+    <Content Include="Content\high\examples\pie-gradient\index.htm" />
+    <Content Include="Content\high\examples\pie-legend\index.htm" />
+    <Content Include="Content\high\examples\pie-monochrome\index.htm" />
+    <Content Include="Content\high\examples\pie-semi-circle\index.htm" />
+    <Content Include="Content\high\examples\polar-spider\index.htm" />
+    <Content Include="Content\high\examples\polar-wind-rose\index.htm" />
+    <Content Include="Content\high\examples\polar\index.htm" />
+    <Content Include="Content\high\examples\polygon\index.htm" />
+    <Content Include="Content\high\examples\pyramid\index.htm" />
+    <Content Include="Content\high\examples\renderer\index.htm" />
+    <Content Include="Content\high\examples\responsive\index.htm" />
+    <Content Include="Content\high\examples\sankey-diagram\index.htm" />
+    <Content Include="Content\high\examples\scatter-boost\index.htm" />
+    <Content Include="Content\high\examples\scatter\index.htm" />
+    <Content Include="Content\high\examples\sparkline\index.htm" />
+    <Content Include="Content\high\examples\spline-inverted\index.htm" />
+    <Content Include="Content\high\examples\spline-irregular-time\index.htm" />
+    <Content Include="Content\high\examples\spline-plot-bands\index.htm" />
+    <Content Include="Content\high\examples\spline-symbols\index.htm" />
+    <Content Include="Content\high\examples\streamgraph\index.htm" />
+    <Content Include="Content\high\examples\styled-mode-column\index.htm" />
+    <Content Include="Content\high\examples\styled-mode-pie\index.htm" />
+    <Content Include="Content\high\examples\sunburst\index.htm" />
+    <Content Include="Content\high\examples\synchronized-charts\index.htm" />
+    <Content Include="Content\high\examples\treemap-coloraxis\index.htm" />
+    <Content Include="Content\high\examples\treemap-large-dataset\index.htm" />
+    <Content Include="Content\high\examples\treemap-with-levels\index.htm" />
+    <Content Include="Content\high\examples\variable-radius-pie\index.htm" />
+    <Content Include="Content\high\examples\variwide\index.htm" />
+    <Content Include="Content\high\examples\vector-plot\index.htm" />
+    <Content Include="Content\high\examples\waterfall\index.htm" />
+    <Content Include="Content\high\examples\windbarb-series\index.htm" />
+    <Content Include="Content\high\examples\wordcloud\index.htm" />
+    <Content Include="Content\high\examples\x-range\index.htm" />
+    <Content Include="Content\high\gfx\vml-radial-gradient.png" />
+    <Content Include="Content\high\graphics\arrow.svg" />
+    <Content Include="Content\high\graphics\circle.svg" />
+    <Content Include="Content\high\graphics\earth.svg" />
+    <Content Include="Content\high\graphics\feature.svg" />
+    <Content Include="Content\high\graphics\fibonacci.svg" />
+    <Content Include="Content\high\graphics\flag-circlepin.svg" />
+    <Content Include="Content\high\graphics\flag-diamondpin.svg" />
+    <Content Include="Content\high\graphics\flag-flag.svg" />
+    <Content Include="Content\high\graphics\flag-squarepin.svg" />
+    <Content Include="Content\high\graphics\flag.svg" />
+    <Content Include="Content\high\graphics\line.svg" />
+    <Content Include="Content\high\graphics\rect.svg" />
+    <Content Include="Content\high\graphics\reset.svg" />
+    <Content Include="Content\high\graphics\save.svg" />
+    <Content Include="Content\high\graphics\search.png" />
+    <Content Include="Content\high\graphics\skies.jpg" />
+    <Content Include="Content\high\graphics\snow.png" />
+    <Content Include="Content\high\graphics\sun.png" />
+    <Content Include="Content\high\graphics\text.svg" />
+    <Content Include="Content\high\graphics\tunnel.svg" />
+    <Content Include="Content\high\index.htm" />
+    <Content Include="Content\imagenes\22154.jpg" />
+    <Content Include="Content\imagenes\280472.jpg" />
+    <Content Include="Content\imagenes\419917.jpg" />
+    <Content Include="Content\imagenes\468739.jpg" />
+    <Content Include="Content\imagenes\510602.jpg" />
+    <Content Include="Content\imagenes\519779.jpg" />
+    <Content Include="Content\imagenes\521718.jpg" />
+    <Content Include="Content\imagenes\559552.jpg" />
+    <Content Include="Content\imagenes\573475.jpg" />
+    <Content Include="Content\imagenes\669681.jpg" />
+    <Content Include="Content\imagenes\680831.jpg" />
+    <Content Include="Content\imagenes\696684.jpg" />
+    <Content Include="Content\imagenes\710996.jpg" />
+    <Content Include="Content\imagenes\777594.jpg" />
+    <Content Include="Content\imagenes\780071.jpg" />
+    <Content Include="Content\imagenes\805201.jpg" />
+    <Content Include="Content\imagenes\82012.jpg" />
+    <Content Include="Content\imagenes\83498.jpg" />
+    <Content Include="Content\imagenes\84381.jpg" />
+    <Content Include="Content\imagenes\857340.jpg" />
+    <Content Include="Content\imagenes\904833.jpg" />
+    <Content Include="Content\imagenes\9602.jpg" />
+    <Content Include="Content\imagenes\Alaska Snowboarding HD Wallpaper.jpg" />
+    <Content Include="Content\imagenes\Beautiful Night on Another Planet.jpg" />
+    <Content Include="Content\imagenes\Bleach Mask HD Wallpaper.jpg" />
+    <Content Include="Content\imagenes\blue outer space planets awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\er space planets stars awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\HD 3D Wallpaper.jpg" />
+    <Content Include="Content\imagenes\HD Bleach Wallpaper.jpg" />
+    <Content Include="Content\imagenes\Hd Planet.jpg" />
+    <Content Include="Content\imagenes\imagen1.jpg" />
+    <Content Include="Content\imagenes\imagen2.jpg" />
+    <Content Include="Content\imagenes\IMG-20161112-WA0002.jpg" />
+    <Content Include="Content\imagenes\IMG-20161112-WA00021.jpg" />
+    <Content Include="Content\imagenes\impacto.jpg" />
+    <Content Include="Content\imagenes\is outer space planets awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\OCEANO20.jpg" />
+    <Content Include="Content\imagenes\on outer space planets awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\onda.jpg" />
+    <Content Include="Content\imagenes\outer space planets stars awesome wallpaper%281%29.jpg" />
+    <Content Include="Content\imagenes\outer space planets stars awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\Planeta Tierra.jpg" />
+    <Content Include="Content\imagenes\re outer space planets awesome wallpaper.jpg" />
+    <Content Include="Content\imagenes\rt outer space planets awesome wallpaper.jpg" />
+    <Content Include="Content\imagen\11787237_883555371737022_1952212372_n.jpg" />
+    <Content Include="Content\imagen\11787237_883555371737022_1952212372_n1.jpg" />
+    <Content Include="Content\imagen\11787237_883555371737022_1952212372_n2.jpg" />
+    <Content Include="Content\imagen\12573875_983452038378753_5372091452348210170_n.jpg" />
+    <Content Include="Content\imagen\12573875_983452038378753_5372091452348210170_n1.jpg" />
+    <Content Include="Content\imagen\12573875_983452038378753_5372091452348210170_n2.jpg" />
+    <Content Include="Content\imagen\1509045_622140224509938_1954792905_n.jpg" />
+    <Content Include="Content\imagen\15965221_1252951884762099_861325573574412680_n.jpg" />
+    <Content Include="Content\imagen\15965221_1252951884762099_861325573574412680_n1.jpg" />
+    <Content Include="Content\imagen\15965221_1252951884762099_861325573574412680_n2.jpg" />
+    <Content Include="Content\imagen\15965221_1252951884762099_861325573574412680_n3.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n1.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n2.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n3.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n4.jpg" />
+    <Content Include="Content\imagen\19696_842634535829106_612635408842377786_n5.jpg" />
+    <Content Include="Content\imagen\Beautiful Clouds.jpg" />
+    <Content Include="Content\imagen\Bleach%282%29.jpg" />
+    <Content Include="Content\imagen\Bleach.jpg" />
+    <Content Include="Content\imagen\Blue Lagoon.jpg" />
+    <Content Include="Content\imagen\Blue Tree.jpg" />
+    <Content Include="Content\imagen\Eclipse.jpg" />
+    <Content Include="Content\imagen\Final Getsuga Ichigo %28Bleach%29.jpg" />
+    <Content Include="Content\imagen\fondo.png" />
+    <Content Include="Content\imagen\fondo1.png" />
+    <Content Include="Content\imagen\fondo2.png" />
+    <Content Include="Content\imagen\Galaxy Siii Hd.jpg" />
+    <Content Include="Content\imagen\Green.jpg" />
+    <Content Include="Content\imagen\IMG-20161109-WA0000.jpg" />
+    <Content Include="Content\imagen\IMG-20161109-WA00001.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA0000.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00001.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000010.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000011.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000012.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000013.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000014.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000015.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000016.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000017.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000018.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000019.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00002.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000020.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000021.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA000022.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00003.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00004.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00005.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00006.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00007.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00008.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00009.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA0001.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA0002.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00021.jpg" />
+    <Content Include="Content\imagen\IMG-20161112-WA00022.jpg" />
+    <Content Include="Content\imagen\IMG-20180515-WA0003.jpg" />
+    <Content Include="Content\imagen\IMG-20180515-WA00031.jpg" />
+    <Content Include="Content\imagen\IMG-20180516-WA0002.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA0006.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00061.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000610.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000611.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000612.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000613.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000614.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000615.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000616.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000617.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000618.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000619.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00062.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000620.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000621.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000622.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000623.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000624.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000625.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000626.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000627.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA000628.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00063.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00064.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00065.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00066.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00067.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00068.jpg" />
+    <Content Include="Content\imagen\IMG-20180517-WA00069.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA0007.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00071.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA000710.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA000711.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA000712.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00072.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00073.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00074.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00075.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00076.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00077.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00078.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00079.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA0008.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00081.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00082.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00083.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00084.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00085.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA0009.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00091.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00092.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00093.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00094.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00095.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00096.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00097.jpg" />
+    <Content Include="Content\imagen\IMG-20180518-WA00098.jpg" />
+    <Content Include="Content\imagen\IMG-20180521-WA0001.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA0002.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00021.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00022.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00023.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00024.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00025.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA0007.jpg" />
+    <Content Include="Content\imagen\IMG-20180522-WA00071.jpg" />
+    <Content Include="Content\imagen\IMG-20180606-WA0000.jpg" />
+    <Content Include="Content\imagen\IMG-20180614-WA0001.jpg" />
+    <Content Include="Content\imagen\IMG-20180621-WA0001.jpg" />
+    <Content Include="Content\imagen\IMG-20180621-WA00011.jpg" />
+    <Content Include="Content\imagen\IMG-20180624-WA0003.jpg" />
+    <Content Include="Content\imagen\IMG-20180624-WA00031.jpg" />
+    <Content Include="Content\imagen\IMG-20180624-WA00032.jpg" />
+    <Content Include="Content\imagen\IMG-20180625-WA0002.jpg" />
+    <Content Include="Content\imagen\IMG-20180625-WA00021.jpg" />
+    <Content Include="Content\imagen\IMG-20180625-WA00022.jpg" />
+    <Content Include="Content\imagen\IMG-20180625-WA00023.jpg" />
+    <Content Include="Content\imagen\Julia 20170718_165342.jpg" />
+    <Content Include="Content\imagen\Julia 20170720_062830 - Copy.jpg" />
+    <Content Include="Content\imagen\Julia 20170720_062830.jpg" />
+    <Content Include="Content\imagen\Kati Catillo 20170525_181438 - Copy.jpg" />
+    <Content Include="Content\imagen\Kati Catillo 20170525_181438.jpg" />
+    <Content Include="Content\imagen\login_img.gif" />
+    <Content Include="Content\imagen\Nice Moon Hd.jpg" />
+    <Content Include="Content\imagen\Nice Wallpaper.jpg" />
+    <Content Include="Content\imagen\Paola 20170415_083217.jpg" />
+    <Content Include="Content\imagen\Paola 20170510_185234.jpg" />
+    <Content Include="Content\imagen\Paradise Island, Nassau, Bahamas.jpg" />
+    <Content Include="Content\imagen\Paradise Island.jpg" />
+    <Content Include="Content\imagen\Pink Path.jpg" />
+    <Content Include="Content\imagen\Twilight Forest.jpg" />
+    <Content Include="Content\imagen\Winter Light.jpg" />
+    <Content Include="Content\imagen\Winter Snow Road.jpg" />
+    <Content Include="Content\jquery\demo\ajaxSubmit-integration-demo.html" />
+    <Content Include="Content\jquery\demo\bootstrap\index.html" />
+    <Content Include="Content\jquery\demo\captcha\captcha.js" />
+    <Content Include="Content\jquery\demo\captcha\images\button.png" />
+    <Content Include="Content\jquery\demo\captcha\style.css" />
+    <Content Include="Content\jquery\demo\cinema\index.html" />
+    <Content Include="Content\jquery\demo\cinema\plan_9.jpg" />
+    <Content Include="Content\jquery\demo\cinema\refer_madness.jpg" />
+    <Content Include="Content\jquery\demo\cinema\saucer_men.jpg" />
+    <Content Include="Content\jquery\demo\css\cmxform.css" />
+    <Content Include="Content\jquery\demo\css\cmxformTemplate.css" />
+    <Content Include="Content\jquery\demo\css\core.css" />
+    <Content Include="Content\jquery\demo\css\reset.css" />
+    <Content Include="Content\jquery\demo\css\screen.css" />
+    <Content Include="Content\jquery\demo\custom-messages-data-demo.html" />
+    <Content Include="Content\jquery\demo\custom-methods-demo.html" />
+    <Content Include="Content\jquery\demo\dynamic-totals.html" />
+    <Content Include="Content\jquery\demo\errorcontainer-demo.html" />
+    <Content Include="Content\jquery\demo\errors-within-labels.html" />
+    <Content Include="Content\jquery\demo\file_input.html" />
+    <Content Include="Content\jquery\demo\images\bg.gif" />
+    <Content Include="Content\jquery\demo\images\checked.gif" />
+    <Content Include="Content\jquery\demo\images\cmxform-divider.gif" />
+    <Content Include="Content\jquery\demo\images\cmxform-fieldset.gif" />
+    <Content Include="Content\jquery\demo\images\loading.gif" />
+    <Content Include="Content\jquery\demo\images\unchecked.gif" />
+    <Content Include="Content\jquery\demo\index.html" />
+    <Content Include="Content\jquery\demo\jquerymobile.html" />
+    <Content Include="Content\jquery\demo\login\images\bg.gif" />
+    <Content Include="Content\jquery\demo\login\images\header1.jpg" />
+    <Content Include="Content\jquery\demo\login\images\page.gif" />
+    <Content Include="Content\jquery\demo\login\images\required_star.gif" />
+    <Content Include="Content\jquery\demo\login\index.html" />
+    <Content Include="Content\jquery\demo\login\screen.css" />
+    <Content Include="Content\jquery\demo\marketo\images\backRequiredGray.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\back_green-fade.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\back_nav_blue.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\blank.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\button-submit.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\favicon.ico" />
+    <Content Include="Content\jquery\demo\marketo\images\help.png" />
+    <Content Include="Content\jquery\demo\marketo\images\left-nav-callout-long.png" />
+    <Content Include="Content\jquery\demo\marketo\images\login-sprite.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\logo_marketo.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\sf.png" />
+    <Content Include="Content\jquery\demo\marketo\images\step1-24.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\step2-24.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\step3-24.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\tab-sprite.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\tab_green.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\time.png" />
+    <Content Include="Content\jquery\demo\marketo\images\toggle.gif" />
+    <Content Include="Content\jquery\demo\marketo\images\warning.gif" />
+    <Content Include="Content\jquery\demo\marketo\index.html" />
+    <Content Include="Content\jquery\demo\marketo\jquery.maskedinput.js" />
+    <Content Include="Content\jquery\demo\marketo\mktSignup.js" />
+    <Content Include="Content\jquery\demo\marketo\step2.htm" />
+    <Content Include="Content\jquery\demo\marketo\stylesheet.css" />
+    <Content Include="Content\jquery\demo\milk\bg.gif" />
+    <Content Include="Content\jquery\demo\milk\index.html" />
+    <Content Include="Content\jquery\demo\milk\left_white.png" />
+    <Content Include="Content\jquery\demo\milk\milk.css" />
+    <Content Include="Content\jquery\demo\milk\milk.png" />
+    <Content Include="Content\jquery\demo\milk\right_white.png" />
+    <Content Include="Content\jquery\demo\multipart\index.html" />
+    <Content Include="Content\jquery\demo\multipart\style.css" />
+    <Content Include="Content\jquery\demo\radio-checkbox-select-demo.html" />
+    <Content Include="Content\jquery\demo\requirejs\app.js" />
+    <Content Include="Content\jquery\demo\requirejs\index.html" />
+    <Content Include="Content\jquery\demo\semantic-ui\index.html" />
+    <Content Include="Content\jquery\demo\site-demos.css" />
+    <Content Include="Content\jquery\demo\themerollered.html" />
+    <Content Include="Content\jquery\demo\tinymce4\index.html" />
+    <Content Include="Content\jquery\demo\tinymce\index.html" />
+    <Content Include="Content\jquery\demo\tinymce\themes\simple\editor_template.js" />
+    <Content Include="Content\jquery\demo\tinymce\themes\simple\img\icons.gif" />
+    <Content Include="Content\jquery\demo\tinymce\themes\simple\langs\en.js" />
+    <Content Include="Content\jquery\demo\tinymce\themes\simple\skins\default\ui.css" />
+    <Content Include="Content\jquery\demo\tinymce\tiny_mce.js" />
+    <Content Include="Content\jquery\dist\additional-methods.js" />
+    <Content Include="Content\jquery\dist\additional-methods.min.js" />
+    <Content Include="Content\jquery\dist\jquery.validate.js" />
+    <Content Include="Content\jquery\dist\jquery.validate.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ar.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ar.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_az.js" />
+    <Content Include="Content\jquery\dist\localization\messages_az.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_bg.js" />
+    <Content Include="Content\jquery\dist\localization\messages_bg.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_bn_BD.js" />
+    <Content Include="Content\jquery\dist\localization\messages_bn_BD.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ca.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ca.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_cs.js" />
+    <Content Include="Content\jquery\dist\localization\messages_cs.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_da.js" />
+    <Content Include="Content\jquery\dist\localization\messages_da.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_de.js" />
+    <Content Include="Content\jquery\dist\localization\messages_de.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_el.js" />
+    <Content Include="Content\jquery\dist\localization\messages_el.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es_AR.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es_AR.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es_PE.js" />
+    <Content Include="Content\jquery\dist\localization\messages_es_PE.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_et.js" />
+    <Content Include="Content\jquery\dist\localization\messages_et.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_eu.js" />
+    <Content Include="Content\jquery\dist\localization\messages_eu.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fa.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fa.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fi.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fi.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fr.js" />
+    <Content Include="Content\jquery\dist\localization\messages_fr.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ge.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ge.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_gl.js" />
+    <Content Include="Content\jquery\dist\localization\messages_gl.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_he.js" />
+    <Content Include="Content\jquery\dist\localization\messages_he.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hr.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hr.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hu.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hu.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hy_AM.js" />
+    <Content Include="Content\jquery\dist\localization\messages_hy_AM.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_id.js" />
+    <Content Include="Content\jquery\dist\localization\messages_id.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_is.js" />
+    <Content Include="Content\jquery\dist\localization\messages_is.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_it.js" />
+    <Content Include="Content\jquery\dist\localization\messages_it.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ja.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ja.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ka.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ka.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_kk.js" />
+    <Content Include="Content\jquery\dist\localization\messages_kk.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ko.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ko.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_lt.js" />
+    <Content Include="Content\jquery\dist\localization\messages_lt.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_lv.js" />
+    <Content Include="Content\jquery\dist\localization\messages_lv.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_mk.js" />
+    <Content Include="Content\jquery\dist\localization\messages_mk.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_my.js" />
+    <Content Include="Content\jquery\dist\localization\messages_my.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_nl.js" />
+    <Content Include="Content\jquery\dist\localization\messages_nl.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_no.js" />
+    <Content Include="Content\jquery\dist\localization\messages_no.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pl.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pl.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pt_BR.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pt_BR.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pt_PT.js" />
+    <Content Include="Content\jquery\dist\localization\messages_pt_PT.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ro.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ro.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ru.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ru.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sd.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sd.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_si.js" />
+    <Content Include="Content\jquery\dist\localization\messages_si.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sk.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sk.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sl.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sl.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sr.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sr.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sr_lat.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sr_lat.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sv.js" />
+    <Content Include="Content\jquery\dist\localization\messages_sv.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_th.js" />
+    <Content Include="Content\jquery\dist\localization\messages_th.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_tj.js" />
+    <Content Include="Content\jquery\dist\localization\messages_tj.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_tr.js" />
+    <Content Include="Content\jquery\dist\localization\messages_tr.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_uk.js" />
+    <Content Include="Content\jquery\dist\localization\messages_uk.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ur.js" />
+    <Content Include="Content\jquery\dist\localization\messages_ur.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_vi.js" />
+    <Content Include="Content\jquery\dist\localization\messages_vi.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_zh.js" />
+    <Content Include="Content\jquery\dist\localization\messages_zh.min.js" />
+    <Content Include="Content\jquery\dist\localization\messages_zh_TW.js" />
+    <Content Include="Content\jquery\dist\localization\messages_zh_TW.min.js" />
+    <Content Include="Content\jquery\dist\localization\methods_de.js" />
+    <Content Include="Content\jquery\dist\localization\methods_de.min.js" />
+    <Content Include="Content\jquery\dist\localization\methods_es_CL.js" />
+    <Content Include="Content\jquery\dist\localization\methods_es_CL.min.js" />
+    <Content Include="Content\jquery\dist\localization\methods_fi.js" />
+    <Content Include="Content\jquery\dist\localization\methods_fi.min.js" />
+    <Content Include="Content\jquery\dist\localization\methods_nl.js" />
+    <Content Include="Content\jquery\dist\localization\methods_nl.min.js" />
+    <Content Include="Content\jquery\dist\localization\methods_pt.js" />
+    <Content Include="Content\jquery\dist\localization\methods_pt.min.js" />
+    <Content Include="Content\jquery\Gruntfile.js" />
+    <Content Include="Content\jquery\lib\jquery-1.11.1.js" />
+    <Content Include="Content\jquery\lib\jquery-1.7.2.js" />
+    <Content Include="Content\jquery\lib\jquery-1.8.3.js" />
+    <Content Include="Content\jquery\lib\jquery-1.9.1.js" />
+    <Content Include="Content\jquery\lib\jquery-3.1.1.js" />
+    <Content Include="Content\jquery\lib\jquery.form.js" />
+    <Content Include="Content\jquery\lib\jquery.js" />
+    <Content Include="Content\jquery\lib\jquery.mockjax-1.5.3.js" />
+    <Content Include="Content\jquery\lib\jquery.mockjax-2.2.1.js" />
+    <Content Include="Content\jquery\lib\jquery.mockjax.js" />
+    <Content Include="Content\jquery\lib\jquery.simulate.js" />
+    <Content Include="Content\jquery\lib\require.js" />
+    <Content Include="Content\jquery\src\additional\accept.js" />
+    <Content Include="Content\jquery\src\additional\additional.js" />
+    <Content Include="Content\jquery\src\additional\alphanumeric.js" />
+    <Content Include="Content\jquery\src\additional\bankaccountNL.js" />
+    <Content Include="Content\jquery\src\additional\bankorgiroaccountNL.js" />
+    <Content Include="Content\jquery\src\additional\bic.js" />
+    <Content Include="Content\jquery\src\additional\cifES.js" />
+    <Content Include="Content\jquery\src\additional\cpfBR.js" />
+    <Content Include="Content\jquery\src\additional\creditcard.js" />
+    <Content Include="Content\jquery\src\additional\creditcardtypes.js" />
+    <Content Include="Content\jquery\src\additional\currency.js" />
+    <Content Include="Content\jquery\src\additional\dateFA.js" />
+    <Content Include="Content\jquery\src\additional\dateITA.js" />
+    <Content Include="Content\jquery\src\additional\dateNL.js" />
+    <Content Include="Content\jquery\src\additional\extension.js" />
+    <Content Include="Content\jquery\src\additional\giroaccountNL.js" />
+    <Content Include="Content\jquery\src\additional\iban.js" />
+    <Content Include="Content\jquery\src\additional\integer.js" />
+    <Content Include="Content\jquery\src\additional\ipv4.js" />
+    <Content Include="Content\jquery\src\additional\ipv6.js" />
+    <Content Include="Content\jquery\src\additional\lettersonly.js" />
+    <Content Include="Content\jquery\src\additional\letterswithbasicpunc.js" />
+    <Content Include="Content\jquery\src\additional\mobileNL.js" />
+    <Content Include="Content\jquery\src\additional\mobileUK.js" />
+    <Content Include="Content\jquery\src\additional\netmask.js" />
+    <Content Include="Content\jquery\src\additional\nieES.js" />
+    <Content Include="Content\jquery\src\additional\nifES.js" />
+    <Content Include="Content\jquery\src\additional\nipPL.js" />
+    <Content Include="Content\jquery\src\additional\notEqualTo.js" />
+    <Content Include="Content\jquery\src\additional\nowhitespace.js" />
+    <Content Include="Content\jquery\src\additional\pattern.js" />
+    <Content Include="Content\jquery\src\additional\phoneNL.js" />
+    <Content Include="Content\jquery\src\additional\phonesUK.js" />
+    <Content Include="Content\jquery\src\additional\phoneUK.js" />
+    <Content Include="Content\jquery\src\additional\phoneUS.js" />
+    <Content Include="Content\jquery\src\additional\postalcodeBR.js" />
+    <Content Include="Content\jquery\src\additional\postalCodeCA.js" />
+    <Content Include="Content\jquery\src\additional\postalcodeIT.js" />
+    <Content Include="Content\jquery\src\additional\postalcodeNL.js" />
+    <Content Include="Content\jquery\src\additional\postcodeUK.js" />
+    <Content Include="Content\jquery\src\additional\require_from_group.js" />
+    <Content Include="Content\jquery\src\additional\skip_or_fill_minimum.js" />
+    <Content Include="Content\jquery\src\additional\statesUS.js" />
+    <Content Include="Content\jquery\src\additional\strippedminlength.js" />
+    <Content Include="Content\jquery\src\additional\time.js" />
+    <Content Include="Content\jquery\src\additional\time12h.js" />
+    <Content Include="Content\jquery\src\additional\url2.js" />
+    <Content Include="Content\jquery\src\additional\vinUS.js" />
+    <Content Include="Content\jquery\src\additional\zipcodeUS.js" />
+    <Content Include="Content\jquery\src\additional\ziprange.js" />
+    <Content Include="Content\jquery\src\ajax.js" />
+    <Content Include="Content\jquery\src\core.js" />
+    <Content Include="Content\jquery\src\localization\messages_ar.js" />
+    <Content Include="Content\jquery\src\localization\messages_az.js" />
+    <Content Include="Content\jquery\src\localization\messages_bg.js" />
+    <Content Include="Content\jquery\src\localization\messages_bn_BD.js" />
+    <Content Include="Content\jquery\src\localization\messages_ca.js" />
+    <Content Include="Content\jquery\src\localization\messages_cs.js" />
+    <Content Include="Content\jquery\src\localization\messages_da.js" />
+    <Content Include="Content\jquery\src\localization\messages_de.js" />
+    <Content Include="Content\jquery\src\localization\messages_el.js" />
+    <Content Include="Content\jquery\src\localization\messages_es.js" />
+    <Content Include="Content\jquery\src\localization\messages_es_AR.js" />
+    <Content Include="Content\jquery\src\localization\messages_es_PE.js" />
+    <Content Include="Content\jquery\src\localization\messages_et.js" />
+    <Content Include="Content\jquery\src\localization\messages_eu.js" />
+    <Content Include="Content\jquery\src\localization\messages_fa.js" />
+    <Content Include="Content\jquery\src\localization\messages_fi.js" />
+    <Content Include="Content\jquery\src\localization\messages_fr.js" />
+    <Content Include="Content\jquery\src\localization\messages_ge.js" />
+    <Content Include="Content\jquery\src\localization\messages_gl.js" />
+    <Content Include="Content\jquery\src\localization\messages_he.js" />
+    <Content Include="Content\jquery\src\localization\messages_hr.js" />
+    <Content Include="Content\jquery\src\localization\messages_hu.js" />
+    <Content Include="Content\jquery\src\localization\messages_hy_AM.js" />
+    <Content Include="Content\jquery\src\localization\messages_id.js" />
+    <Content Include="Content\jquery\src\localization\messages_is.js" />
+    <Content Include="Content\jquery\src\localization\messages_it.js" />
+    <Content Include="Content\jquery\src\localization\messages_ja.js" />
+    <Content Include="Content\jquery\src\localization\messages_ka.js" />
+    <Content Include="Content\jquery\src\localization\messages_kk.js" />
+    <Content Include="Content\jquery\src\localization\messages_ko.js" />
+    <Content Include="Content\jquery\src\localization\messages_lt.js" />
+    <Content Include="Content\jquery\src\localization\messages_lv.js" />
+    <Content Include="Content\jquery\src\localization\messages_mk.js" />
+    <Content Include="Content\jquery\src\localization\messages_my.js" />
+    <Content Include="Content\jquery\src\localization\messages_nl.js" />
+    <Content Include="Content\jquery\src\localization\messages_no.js" />
+    <Content Include="Content\jquery\src\localization\messages_pl.js" />
+    <Content Include="Content\jquery\src\localization\messages_pt_BR.js" />
+    <Content Include="Content\jquery\src\localization\messages_pt_PT.js" />
+    <Content Include="Content\jquery\src\localization\messages_ro.js" />
+    <Content Include="Content\jquery\src\localization\messages_ru.js" />
+    <Content Include="Content\jquery\src\localization\messages_sd.js" />
+    <Content Include="Content\jquery\src\localization\messages_si.js" />
+    <Content Include="Content\jquery\src\localization\messages_sk.js" />
+    <Content Include="Content\jquery\src\localization\messages_sl.js" />
+    <Content Include="Content\jquery\src\localization\messages_sr.js" />
+    <Content Include="Content\jquery\src\localization\messages_sr_lat.js" />
+    <Content Include="Content\jquery\src\localization\messages_sv.js" />
+    <Content Include="Content\jquery\src\localization\messages_th.js" />
+    <Content Include="Content\jquery\src\localization\messages_tj.js" />
+    <Content Include="Content\jquery\src\localization\messages_tr.js" />
+    <Content Include="Content\jquery\src\localization\messages_uk.js" />
+    <Content Include="Content\jquery\src\localization\messages_ur.js" />
+    <Content Include="Content\jquery\src\localization\messages_vi.js" />
+    <Content Include="Content\jquery\src\localization\messages_zh.js" />
+    <Content Include="Content\jquery\src\localization\messages_zh_TW.js" />
+    <Content Include="Content\jquery\src\localization\methods_de.js" />
+    <Content Include="Content\jquery\src\localization\methods_es_CL.js" />
+    <Content Include="Content\jquery\src\localization\methods_fi.js" />
+    <Content Include="Content\jquery\src\localization\methods_nl.js" />
+    <Content Include="Content\jquery\src\localization\methods_pt.js" />
+    <Content Include="Content\jquery\test\additional\creditcard.js" />
+    <Content Include="Content\jquery\test\additional\netmask.js" />
+    <Content Include="Content\jquery\test\aria.js" />
+    <Content Include="Content\jquery\test\error-placement.js" />
+    <Content Include="Content\jquery\test\index.html" />
+    <Content Include="Content\jquery\test\messages.js" />
+    <Content Include="Content\jquery\test\methods.js" />
+    <Content Include="Content\jquery\test\rules.js" />
+    <Content Include="Content\jquery\test\test.js" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Content\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Content\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Content\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Content\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="Content\high\code\css\highcharts.scss" />
+    <Content Include="Content\high\code\highcharts-3d.js.map" />
+    <Content Include="Content\high\code\highcharts-more.js.map" />
+    <Content Include="Content\high\code\highcharts.js.map" />
+    <Content Include="Content\high\code\js\highcharts-3d.js.map" />
+    <Content Include="Content\high\code\js\highcharts-more.js.map" />
+    <Content Include="Content\high\code\js\highcharts.js.map" />
+    <Content Include="Content\high\code\js\modules\accessibility.js.map" />
+    <Content Include="Content\high\code\js\modules\annotations.js.map" />
+    <Content Include="Content\high\code\js\modules\boost-canvas.js.map" />
+    <Content Include="Content\high\code\js\modules\boost.js.map" />
+    <Content Include="Content\high\code\js\modules\broken-axis.js.map" />
+    <Content Include="Content\high\code\js\modules\bullet.js.map" />
+    <Content Include="Content\high\code\js\modules\data.js.map" />
+    <Content Include="Content\high\code\js\modules\drag-panes.js.map" />
+    <Content Include="Content\high\code\js\modules\drilldown.js.map" />
+    <Content Include="Content\high\code\js\modules\export-data.js.map" />
+    <Content Include="Content\high\code\js\modules\exporting.js.map" />
+    <Content Include="Content\high\code\js\modules\funnel.js.map" />
+    <Content Include="Content\high\code\js\modules\gantt.js.map" />
+    <Content Include="Content\high\code\js\modules\grid-axis.js.map" />
+    <Content Include="Content\high\code\js\modules\heatmap.js.map" />
+    <Content Include="Content\high\code\js\modules\histogram-bellcurve.js.map" />
+    <Content Include="Content\high\code\js\modules\item-series.js.map" />
+    <Content Include="Content\high\code\js\modules\no-data-to-display.js.map" />
+    <Content Include="Content\high\code\js\modules\offline-exporting.js.map" />
+    <Content Include="Content\high\code\js\modules\oldie.js.map" />
+    <Content Include="Content\high\code\js\modules\overlapping-datalabels.js.map" />
+    <Content Include="Content\high\code\js\modules\parallel-coordinates.js.map" />
+    <Content Include="Content\high\code\js\modules\pareto.js.map" />
+    <Content Include="Content\high\code\js\modules\sankey.js.map" />
+    <Content Include="Content\high\code\js\modules\series-label.js.map" />
+    <Content Include="Content\high\code\js\modules\solid-gauge.js.map" />
+    <Content Include="Content\high\code\js\modules\static-scale.js.map" />
+    <Content Include="Content\high\code\js\modules\stock.js.map" />
+    <Content Include="Content\high\code\js\modules\streamgraph.js.map" />
+    <Content Include="Content\high\code\js\modules\sunburst.js.map" />
+    <Content Include="Content\high\code\js\modules\tilemap.js.map" />
+    <Content Include="Content\high\code\js\modules\treemap.js.map" />
+    <Content Include="Content\high\code\js\modules\variable-pie.js.map" />
+    <Content Include="Content\high\code\js\modules\variwide.js.map" />
+    <Content Include="Content\high\code\js\modules\vector.js.map" />
+    <Content Include="Content\high\code\js\modules\windbarb.js.map" />
+    <Content Include="Content\high\code\js\modules\wordcloud.js.map" />
+    <Content Include="Content\high\code\js\modules\xrange.js.map" />
+    <Content Include="Content\high\code\js\themes\avocado.js.map" />
+    <Content Include="Content\high\code\js\themes\dark-blue.js.map" />
+    <Content Include="Content\high\code\js\themes\dark-green.js.map" />
+    <Content Include="Content\high\code\js\themes\dark-unica.js.map" />
+    <Content Include="Content\high\code\js\themes\gray.js.map" />
+    <Content Include="Content\high\code\js\themes\grid-light.js.map" />
+    <Content Include="Content\high\code\js\themes\grid.js.map" />
+    <Content Include="Content\high\code\js\themes\sand-signika.js.map" />
+    <Content Include="Content\high\code\js\themes\skies.js.map" />
+    <Content Include="Content\high\code\js\themes\sunset.js.map" />
+    <Content Include="Content\high\code\modules\accessibility.js.map" />
+    <Content Include="Content\high\code\modules\annotations.js.map" />
+    <Content Include="Content\high\code\modules\boost-canvas.js.map" />
+    <Content Include="Content\high\code\modules\boost.js.map" />
+    <Content Include="Content\high\code\modules\broken-axis.js.map" />
+    <Content Include="Content\high\code\modules\bullet.js.map" />
+    <Content Include="Content\high\code\modules\data.js.map" />
+    <Content Include="Content\high\code\modules\drag-panes.js.map" />
+    <Content Include="Content\high\code\modules\drilldown.js.map" />
+    <Content Include="Content\high\code\modules\export-data.js.map" />
+    <Content Include="Content\high\code\modules\exporting.js.map" />
+    <Content Include="Content\high\code\modules\funnel.js.map" />
+    <Content Include="Content\high\code\modules\gantt.js.map" />
+    <Content Include="Content\high\code\modules\grid-axis.js.map" />
+    <Content Include="Content\high\code\modules\heatmap.js.map" />
+    <Content Include="Content\high\code\modules\histogram-bellcurve.js.map" />
+    <Content Include="Content\high\code\modules\item-series.js.map" />
+    <Content Include="Content\high\code\modules\no-data-to-display.js.map" />
+    <Content Include="Content\high\code\modules\offline-exporting.js.map" />
+    <Content Include="Content\high\code\modules\oldie.js.map" />
+    <Content Include="Content\high\code\modules\overlapping-datalabels.js.map" />
+    <Content Include="Content\high\code\modules\parallel-coordinates.js.map" />
+    <Content Include="Content\high\code\modules\pareto.js.map" />
+    <Content Include="Content\high\code\modules\sankey.js.map" />
+    <Content Include="Content\high\code\modules\series-label.js.map" />
+    <Content Include="Content\high\code\modules\solid-gauge.js.map" />
+    <Content Include="Content\high\code\modules\static-scale.js.map" />
+    <Content Include="Content\high\code\modules\stock.js.map" />
+    <Content Include="Content\high\code\modules\streamgraph.js.map" />
+    <Content Include="Content\high\code\modules\sunburst.js.map" />
+    <Content Include="Content\high\code\modules\tilemap.js.map" />
+    <Content Include="Content\high\code\modules\treemap.js.map" />
+    <Content Include="Content\high\code\modules\variable-pie.js.map" />
+    <Content Include="Content\high\code\modules\variwide.js.map" />
+    <Content Include="Content\high\code\modules\vector.js.map" />
+    <Content Include="Content\high\code\modules\windbarb.js.map" />
+    <Content Include="Content\high\code\modules\wordcloud.js.map" />
+    <Content Include="Content\high\code\modules\xrange.js.map" />
+    <Content Include="Content\high\code\themes\avocado.js.map" />
+    <Content Include="Content\high\code\themes\dark-blue.js.map" />
+    <Content Include="Content\high\code\themes\dark-green.js.map" />
+    <Content Include="Content\high\code\themes\dark-unica.js.map" />
+    <Content Include="Content\high\code\themes\gray.js.map" />
+    <Content Include="Content\high\code\themes\grid-light.js.map" />
+    <Content Include="Content\high\code\themes\grid.js.map" />
+    <Content Include="Content\high\code\themes\sand-signika.js.map" />
+    <Content Include="Content\high\code\themes\skies.js.map" />
+    <Content Include="Content\high\code\themes\sunset.js.map" />
+    <Content Include="Content\high\Highcharts-6.0.7.zip" />
+    <Content Include="Content\imagen\2ca657f8b1187c54b48e1fc3b9055bc41404490448313.mu" />
+    <Content Include="Content\imagenes\691716Los_valores_valen_menos.doc" />
+    <Content Include="Content\imagenes\694120La Moral.doc" />
+    <Content Include="Content\jquery\demo\captcha\fonts\Anorexia.ttf" />
+    <Content Include="Content\jquery\demo\captcha\images\image.php" />
+    <Content Include="Content\jquery\demo\captcha\image_req.php" />
+    <Content Include="Content\jquery\demo\captcha\index.php" />
+    <Content Include="Content\jquery\demo\captcha\newsession.php" />
+    <Content Include="Content\jquery\demo\captcha\process.php" />
+    <Content Include="Content\jquery\demo\captcha\rand.php" />
+    <Content Include="Content\jquery\jquery-validation-1.17.0.zip" />
+    <Content Include="Content\jquery\package.json" />
+    <Content Include="Content\jquery\README.md" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-3.3.7-dist\css\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\FontAwesome.otf" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\bootstrap-3.3.7-dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Models\paginadb.edmx.sql" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\index.d.ts" />
+    <Content Include="Scripts\jquery-3.0.0.js" />
+    <Content Include="Scripts\jquery-3.0.0.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\jquery-3.0.0.slim.min.map" />
+    <Content Include="Scripts\jquery-3.0.0.min.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <EntityDeploy Include="Models\pagina.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>pagina.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\pagina.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pagina.edmx</DependentUpon>
+      <LastGenOutput>pagina.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\pagina.edmx.diagram">
+      <DependentUpon>pagina.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\pagina.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>pagina.edmx</DependentUpon>
+      <LastGenOutput>pagina1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>pagina.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+      <DependentUpon>pagina.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\controlador\pagina.cshtml" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Views\controlador\insertar.cshtml" />
+    <Content Include="Views\controlador\registrarse.cshtml" />
+    <Content Include="Views\controlador\session.cshtml" />
+    <Content Include="Views\controlador\iniciarsession.cshtml" />
+    <Content Include="Views\grafico.cshtml" />
+    <Content Include="Views\controlador\subir.cshtml" />
+    <Content Include="Views\controlador\registra.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Shared\DisplayTempletes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4760/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

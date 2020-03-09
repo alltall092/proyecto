@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="paginawebModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="paginawebEntities1" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="pagina" EntityType="paginawebModel.pagina" />
+    <EntitySet Name="comentarios" EntityType="paginawebModel.comentarios" />
+  </EntityContainer>
+  <EntityType Name="pagina">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="inicio" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="noticias" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="imagenes" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="contacto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="comentarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="usuario" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="comentario" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

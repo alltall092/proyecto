@@ -1,0 +1,26 @@
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\paginaweb.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\paginaweb.pdb
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\EntityFramework.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Helpers.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Mvc.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Providers.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Razor.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.Deployment.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.Razor.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\EntityFramework.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Helpers.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Mvc.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.Razor.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.Deployment.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\System.Web.WebPages.Razor.xml
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\es\EntityFramework.resources.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\bin\es\System.Web.Providers.resources.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\obj\Debug\paginaweb.csprojResolveAssemblyReference.cache
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\obj\Debug\paginaweb.dll
+C:\Users\JULIO\Documents\Visual Studio 2012\Projects\paginaweb\paginaweb\obj\Debug\paginaweb.pdb
+C:\Users\julioalberto\Desktop\portafolio\pagina web\paginaweb\paginaweb\obj\Debug\paginaweb.csprojResolveAssemblyReference.cache
+C:\Users\julioalberto\Desktop\portafolio\pagina web\paginaweb\paginaweb\obj\Debug\paginaweb.dll
+C:\Users\julioalberto\Desktop\portafolio\pagina web\paginaweb\paginaweb\obj\Debug\paginaweb.pdb

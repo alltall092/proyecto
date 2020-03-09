@@ -1,0 +1,281 @@
+﻿@{
+    ViewBag.Title = "pagina";
+    
+    
+   
+        
+}
+
+
+<html>
+<head>
+    <script src="../../Content/bootstrap-3.3.7-dist/js/jquery.js"></script>
+  <script src="../../Content/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <link href="../../Content/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../../Content/font-awesome-4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+      
+        contador = 0;
+        function slideshow() {
+            imagen = document.getElementsByClassName("img-rounded");
+            for (var i = 0;i< imagen.length; i++) {
+                imagen[i].style.display = "none";
+
+
+
+            }
+            contador++;
+            if (contador > imagen.length) {
+                contador = 1;
+
+            }
+            imagen[contador - 1].style.display = "block";
+
+        }
+        setInterval("slideshow()", 2000);
+       // var x = $(document)
+        //x.ready(petana);
+        //function petana() {
+           // var z=$(".tab-content").tab();
+       // }
+    </script>
+
+    <style type="text/css">
+        #contenedor img {
+            position: absolute;
+            width: 100%;
+        }
+
+        .nav-stack li {
+            color:lightblue;
+            margin:2px;
+            padding:2px;
+             border-radius:10px;
+               border:none white;
+              text-transform:capitalize;
+            
+              font-family:Arial;
+              font-size:20px;
+
+    
+
+        }
+        .col-md-2{
+            background-color:black;
+            border-radius:10px;
+            
+            
+            
+
+
+        }
+
+        .navbar {
+text-transform:capitalize;
+font-size:20px;
+text-shadow:10px blue;
+font-family: 'Palatino Linotype';
+margin:5px;
+padding:5px;
+
+
+        }
+        
+        h4 {
+            text-align:center;
+            font-family:'Palatino Linotype';
+        }
+
+        i:hover {
+            color:orange;
+        }
+
+    </style>
+</head>
+<body onload="slideshow()">
+   
+        <nav class=" navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <h1 class="navbar-brand"><i class="fa fa-globe" style="font-size:90px; margin-top:-45px"></i></h1>
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+                           <span class="icon-bar"></span>
+
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                       </button>
+                    </div>
+                        <div id="menu" class="collapse navbar-collapse">
+ <ul class=" nav navbar-nav">
+<li><a href="#"><i class="fa fa-home"></i>foro</a></li>
+<li><a href="#"><i  class="fa fa-info-circle"></i>informacion</a></li>
+<li><a href="#"><i class="fa fa-newspaper-o"></i>noticias recientes</a></li>
+                        </ul>
+                           
+    <div class="navbar-right">
+                             <ul class=" nav navbar-nav">
+<li><a href="controlador/iniciarsession"><i class="fa fa-sign-in"></i>iniciar session</a></li>
+<li><a href="controlador/registrarse"><i class="fa fa-registered"></i> registrarse</a></li>
+</ul>
+</div>
+                                              
+</div>
+                </nav>
+     <div class="container">
+        <div class="row">
+                    
+            <div class="col-md-12">
+        
+<div id="contenedor">
+    <img  class="img img-rounded" src="../../Content/imagenes/blue outer space planets awesome wallpaper.jpg" height="400" width="1200" />
+      <img class="img img-rounded" src="../../Content/imagenes/Planeta Tierra.jpg" height="400" width="1200" />
+      <img class="img img-rounded" src="../../Content/imagenes/re outer space planets awesome wallpaper.jpg" height="400" width="1200" />
+
+    <img  class="img img-rounded" src="../../Content/imagenes/HD 3D Wallpaper.jpg" height="400" width="1200" />
+      <img class="img img-rounded" src="../../Content/imagenes/696684.jpg" height="400" width="1200" />
+      <img class="img img-rounded" src="../../Content/imagenes/9602.jpg" height="400" width="1200" />
+    </div>
+                <br />
+                <br />
+                <div class="col-md-12" style="margin-top:400px;">
+    <div class="col-md-2">
+<ul  class="nav nav-stack">
+    <h4 style="color:white; text-transform:capitalize;">menu principal</h4>
+    <i style="font-size:150px; text-align:center; color:lightsteelblue; margin-left:20px;"  class="fa fa-html5"></i>
+<li class="active"><a href="#inicio" data-toggle="tab"><i class="fa fa-folder-open"></i>inicio</a></li>
+<li><a href="#noticias" data-toggle="tab"><i class="fa fa-folder-open"></i>noticias</a></li>
+<li><a href="#imagenes" data-toggle="tab"><i class="fa fa-folder-open"></i>imagenes</a></li>
+    <li><a href="#contacto" data-toggle="tab"><i class="fa fa-folder-open"></i>contacto</a></li>
+
+</ul>
+
+</div>
+                <div class="col-md-10">
+<div class="tab-content">
+<div id="inicio" class="tab-pane active">
+    @foreach(var fila in  ViewBag.consulta)
+    {
+       <p> @fila.inicio </p>
+
+
+
+    }
+</div>
+<div id="noticias" class="tab-pane">
+ @foreach (var fila in  ViewBag.consulta)
+    {
+       <p> @fila.noticias</p>
+
+
+
+    }
+</div>
+    <div id="imagenes" class="tab-pane">
+        @foreach (var fila in  ViewBag.consulta)
+    {
+      <img src="../../Content/imagenes/@fila.imagenes" height="200"  width="200" />
+
+
+
+    }
+   
+</div>
+
+    <div id="contacto" class="tab-pane">
+      
+   
+            
+  
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+    </div>
+                    </div>
+                    </div>
+                </div>
+         </div>
+
+         <br />
+  <div class="container-fluid">
+      <div class="row">
+      <div class="col-md-12" style="background-color:cadetblue; height:250px;">
+
+          <div class="col-md-3">
+<dt>contacto</dt>
+              <dd>julio perez</dd>
+              <dt>telefono</dt>
+              <dd>8298046401</dd>
+              <dt>email</dt>
+              <dd>alltall092@gmail.com</dd>
+
+
+
+
+          </div>
+ <div class="col-md-3">
+<dt>contacto</dt>
+              <dd>julio perez</dd>
+              <dt>telefono</dt>
+              <dd>8298046401</dd>
+              <dt>email</dt>
+              <dd>alltall092@gmail.com</dd>
+
+
+
+
+          </div>
+           <div class="col-md-3">
+<dt>contacto</dt>
+              <dd>julio perez</dd>
+              <dt>telefono</dt>
+              <dd>8298046401</dd>
+              <dt>email</dt>
+              <dd>alltall092@gmail.com</dd>
+
+
+
+
+          </div>
+           <div class="col-md-3">
+<dt>contacto</dt>
+              <dd>julio perez</dd>
+              <dt>telefono</dt>
+              <dd>8298046401</dd>
+              <dt>email</dt>
+              <dd>alltall092@gmail.com</dd>
+
+
+
+
+          </div>
+
+
+
+
+          </div>
+
+
+
+
+
+      </div>
+              </div>
+
+</body>
+
+
+</html>
+

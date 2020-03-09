@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="paginawebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="paginawebModelStoreContainer">
+          <EntitySet Name="comentarios" EntityType="paginawebModel.Store.comentarios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="pagina" EntityType="paginawebModel.Store.pagina" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="registrarse" EntityType="paginawebModel.Store.registrarse" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="comentarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="comentario" Type="text" />
+        </EntityType>
+        <EntityType Name="pagina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="inicio" Type="text" />
+          <Property Name="noticias" Type="text" />
+          <Property Name="imagenes" Type="varchar" MaxLength="150" />
+          <Property Name="contacto" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="registrarse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="varchar" MaxLength="100" />
+          <Property Name="apellido" Type="varchar" MaxLength="100" />
+          <Property Name="usuario" Type="varchar" MaxLength="100" />
+          <Property Name="clave1" Type="varchar" MaxLength="100" />
+          <Property Name="clave2" Type="varchar" MaxLength="100" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="sexo" Type="varchar" MaxLength="100" />
+          <Property Name="pais" Type="varchar" MaxLength="100" />
+          <Property Name="fecha_de_nacimiento" Type="datetime" />
+          <Property Name="foto" Type="varchar" MaxLength="100" />
+          <Property Name="caracteristica" Type="text" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="paginawebModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="paginawebEntities8" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="comentarios" EntityType="paginawebModel.comentarios" />
+          <EntitySet Name="pagina" EntityType="paginawebModel.pagina" />
+          <EntitySet Name="registrarse" EntityType="paginawebModel.registrarse" />
+          <EntitySet Name="menusessionConjunto" EntityType="paginawebModel.menusession" />
+        </EntityContainer>
+        <EntityType Name="comentarios">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="usuario" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="comentario" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="pagina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="inicio" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="noticias" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="imagenes" Type="String" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="contacto" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="registrarse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="apellido" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="usuario" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="clave1" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="clave2" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="sexo" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="pais" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="fecha_de_nacimiento" Type="DateTime" Precision="3" />
+          <Property Name="foto" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="caracteristica" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="menusession">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="inicio" Nullable="false" />
+          <Property Type="String" Name="noticias" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="paginawebModelStoreContainer" CdmEntityContainer="paginawebEntities8">
+          <EntitySetMapping Name="comentarios">
+            <EntityTypeMapping TypeName="paginawebModel.comentarios">
+              <MappingFragment StoreEntitySet="comentarios">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="comentario" ColumnName="comentario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pagina">
+            <EntityTypeMapping TypeName="paginawebModel.pagina">
+              <MappingFragment StoreEntitySet="pagina">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="inicio" ColumnName="inicio" />
+                <ScalarProperty Name="noticias" ColumnName="noticias" />
+                <ScalarProperty Name="imagenes" ColumnName="imagenes" />
+                <ScalarProperty Name="contacto" ColumnName="contacto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="registrarse">
+            <EntityTypeMapping TypeName="paginawebModel.registrarse">
+              <MappingFragment StoreEntitySet="registrarse">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="apellido" ColumnName="apellido" />
+                <ScalarProperty Name="usuario" ColumnName="usuario" />
+                <ScalarProperty Name="clave1" ColumnName="clave1" />
+                <ScalarProperty Name="clave2" ColumnName="clave2" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sexo" ColumnName="sexo" />
+                <ScalarProperty Name="pais" ColumnName="pais" />
+                <ScalarProperty Name="fecha_de_nacimiento" ColumnName="fecha_de_nacimiento" />
+                <ScalarProperty Name="foto" ColumnName="foto" />
+                <ScalarProperty Name="caracteristica" ColumnName="caracteristica" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

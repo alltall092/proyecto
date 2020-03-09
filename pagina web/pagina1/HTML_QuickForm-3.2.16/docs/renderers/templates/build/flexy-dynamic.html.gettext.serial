@@ -1,0 +1,25 @@
+a:11:{i:0;s:34:"Flexy template for Object renderer";i:1;s:479:"body, td, th { 
+        font-family: sans-serif; 
+        color: Navy; 
+        background-color: #EEE; 
+        font-size: smaller; 
+        white-space: nowrap; 
+    } 
+     
+    .maintable { 
+        border: thin dashed #D0D0D0; 
+        background-color: #EEE; 
+    } 
+     
+    .header { 
+        color: #FFF; 
+        background-color: #999; 
+    } 
+     
+    .green { 
+        background-color : #CFC; 
+        color: black; 
+    }
+    .error { 
+        color: red; 
+    }";i:2;s:17:"Collected Errors:";i:3;s:12:"in element [";i:4;s:14:"Best Practice:";i:5;s:53:"Use only one dynamic form template like this for your";i:6;s:44:"Flexy driven project. You include this where";i:7;s:52:"to place a form with the formdata object rendered by";i:8;s:36:"Object QuickForm Renderer as option:";i:9;s:39:"&lt;include file=form-dynamic.tpl form=";i:10;s:35:"The used &quot;Dynamic&quot; Object";}

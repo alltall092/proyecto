@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="paginawebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="paginawebModelStoreContainer">
+    <EntitySet Name="comentarios" EntityType="paginawebModel.Store.comentarios" store:Type="Tables" store:Schema="dbo" store:Name="comentarios">
+      <DefiningQuery>SELECT 
+      [comentarios].[id] AS [id], 
+      [comentarios].[usuario] AS [usuario], 
+      [comentarios].[email] AS [email], 
+      [comentarios].[comentario] AS [comentario]
+      FROM [dbo].[comentarios] AS [comentarios]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="pagina" EntityType="paginawebModel.Store.pagina" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'paginaweb.dbo.comentarios' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="comentarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="comentario" Type="text" />
+  </EntityType>
+  <EntityType Name="pagina">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="inicio" Type="text" />
+    <Property Name="noticias" Type="text" />
+    <Property Name="imagenes" Type="varchar" MaxLength="150" />
+    <Property Name="contacto" Type="varchar" MaxLength="50" />
+  </EntityType>
+</Schema>

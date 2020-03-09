@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="paginawebModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="paginawebModelStoreContainer">
+    <EntitySet Name="comentarios" EntityType="paginawebModel.Store.comentarios" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="pagina" EntityType="paginawebModel.Store.pagina" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="registrarse" EntityType="paginawebModel.Store.registrarse" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="comentarios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="comentario" Type="text" />
+  </EntityType>
+  <EntityType Name="pagina">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="inicio" Type="text" />
+    <Property Name="noticias" Type="text" />
+    <Property Name="imagenes" Type="varchar" MaxLength="150" />
+    <Property Name="contacto" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="registrarse">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="varchar" MaxLength="100" />
+    <Property Name="apellido" Type="varchar" MaxLength="100" />
+    <Property Name="usuario" Type="varchar" MaxLength="100" />
+    <Property Name="clave1" Type="varchar" MaxLength="100" />
+    <Property Name="clave2" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="sexo" Type="varchar" MaxLength="100" />
+    <Property Name="pais" Type="varchar" MaxLength="100" />
+    <Property Name="fecha_de_nacimiento" Type="datetime" />
+    <Property Name="foto" Type="varchar" MaxLength="100" />
+    <Property Name="caracteristica" Type="text" />
+  </EntityType>
+</Schema>

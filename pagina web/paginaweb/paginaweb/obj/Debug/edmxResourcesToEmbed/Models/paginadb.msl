@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="paginawebModelStoreContainer" CdmEntityContainer="paginawebEntities1">
+    <EntitySetMapping Name="pagina">
+      <EntityTypeMapping TypeName="paginawebModel.pagina">
+        <MappingFragment StoreEntitySet="pagina">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="inicio" ColumnName="inicio" />
+          <ScalarProperty Name="noticias" ColumnName="noticias" />
+          <ScalarProperty Name="imagenes" ColumnName="imagenes" />
+          <ScalarProperty Name="contacto" ColumnName="contacto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comentarios">
+      <EntityTypeMapping TypeName="paginawebModel.comentarios">
+        <MappingFragment StoreEntitySet="comentarios">
+          <ScalarProperty Name="comentario" ColumnName="comentario" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="usuario" ColumnName="usuario" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
