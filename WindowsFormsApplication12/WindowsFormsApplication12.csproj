@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C96A3427-4D28-4A20-AD07-C7C56877E571}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WindowsFormsApplication12</RootNamespace>
+    <AssemblyName>WindowsFormsApplication12</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\facturacion1\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="factura.cs" />
+    <Compile Include="Facturacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facturacion.Designer.cs">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Productos.Designer.cs">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.cs">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes.Designer.cs">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Facturacion.resx">
+      <DependentUpon>Facturacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Productos.resx">
+      <DependentUpon>Productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reporte.rdlc" />
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes.resx">
+      <DependentUpon>Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\AxWMPLib.AxWindowsMediaPlayer.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib.AxWindowsMediaPlayerEventMulticaster.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_AudioLanguageChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_AudioLanguageChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_BufferingEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_BufferingEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnErrorEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnMediaErrorEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnMediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromBurnStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromMediaChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromMediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromRipMediaErrorEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromRipMediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromRipStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CdromRipStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ClickEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CreatePartnershipCompleteEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CreatePartnershipCompleteEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentItemChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentItemChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentMediaItemAvailableEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentMediaItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentPlaylistChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentPlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentPlaylistItemAvailableEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_CurrentPlaylistItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceConnectEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceConnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceDisconnectEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceDisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceEstimationEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceEstimationEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceStatusChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceStatusChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceSyncErrorEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceSyncErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceSyncStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DeviceSyncStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DisconnectEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DomainChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DomainChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DoubleClickEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DoubleClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DurationUnitChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_DurationUnitChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_EndOfStreamEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_EndOfStreamEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_FolderScanStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_FolderScanStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyDownEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyDownEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyPressEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyPressEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyUpEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_KeyUpEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_LibraryConnectEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_LibraryConnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_LibraryDisconnectEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_LibraryDisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MarkerHitEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MarkerHitEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringAddedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringChangedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringRemovedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionAttributeStringRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionMediaAddedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionMediaAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionMediaRemovedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaCollectionMediaRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaErrorEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ModeChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ModeChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseDownEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseDownEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseMoveEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseMoveEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseUpEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_MouseUpEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_OpenPlaylistSwitchEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_OpenPlaylistSwitchEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_OpenStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_OpenStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistAddedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistRemovedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistSetAsDeletedEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlaylistCollectionPlaylistSetAsDeletedEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlayStateChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PositionChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_PositionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ScriptCommandEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_ScriptCommandEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_StringCollectionChangeEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_StringCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_WarningEvent.datasource" />
+    <None Include="Properties\DataSources\AxWMPLib._WMPOCXEvents_WarningEventHandler.datasource" />
+    <None Include="Properties\DataSources\Clientes.datasource" />
+    <None Include="Properties\DataSources\Conexion.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ClienteDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ClienteRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ClienteRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ClienteRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturacionDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturacionRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturacionRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturacionRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturaDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturalDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturalRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturalRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturalRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturarDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturaRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturarRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturarRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.facturarRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.NombreClientesDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.NombreClientesRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.NombreClientesRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.NombreClientesRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productosDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productosRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.productRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ResporteDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ResporteRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ResporteRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.ResporteRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.SelectQueryDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.SelectQueryRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.SelectQueryRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.SelectQueryRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet1.usuariosDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet1.usuariosRow.datasource" />
+    <None Include="Properties\DataSources\DataSet1.usuariosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet1.usuariosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet2.ClienteDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet2.ClienteRow.datasource" />
+    <None Include="Properties\DataSources\DataSet2.ClienteRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet2.ClienteRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet2.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturacionDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturacionRow.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturacionRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturacionRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturaDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturaRow.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet2.facturaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet2.productosDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet2.productosRow.datasource" />
+    <None Include="Properties\DataSources\DataSet2.productosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet2.productosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\DataSet2.usuariosDataTable.datasource" />
+    <None Include="Properties\DataSources\DataSet2.usuariosRow.datasource" />
+    <None Include="Properties\DataSources\DataSet2.usuariosRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\DataSet2.usuariosRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\factura.datasource" />
+    <None Include="Properties\DataSources\Facturacion.datasource" />
+    <None Include="Properties\DataSources\ListViewColumnSorter+SortModifiers.datasource" />
+    <None Include="Properties\DataSources\ListViewColumnSorter.datasource" />
+    <None Include="Properties\DataSources\Menu.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationAction.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationBase.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.AnimationFinishedEvaluator.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.ColorBlendAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.ExpandAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Animation.MoveAnimation.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroStyleExtender.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroStyleManager.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Components.MetroToolTip.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.HiddenTabs.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroCheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroContextMenu.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroDataGridHelper.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroDateTime.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroGrid.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroLabel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroLink.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView+ScrollBarCommands.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView+ScrollPositionChangedDelegate.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroListView.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroPanel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroProgressSpinner.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroRadioButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroScrollBar+ScrollValueChangedDelegate.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroScrollBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabPage.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTabPageCollection.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+ButClick.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+LUClear.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox+MetroTextButton.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTextBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTile.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroToggle.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroTrackBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Controls.MetroUserControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousBlockBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousSpaceBlockBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssAnonymousSpaceBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssBlock.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssConstants.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssDefaults.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssLength+CssUnit.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssLength.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssPropertyAttribute.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssPropertyInheritedAttribute.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssRectangle.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.CssValue.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlConstants.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlLabel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlPanel.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlRenderer.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlTag.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.HtmlToolTip.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.Html.InitialContainer.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ProgressBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar+Thumb.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+ScrollBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar+Bar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar+Thumb.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor+TrackBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BackColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+CheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+ComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor+TabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+BorderColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Button.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+CheckBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+ComboBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Label.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Link.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+ProgressBar.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+TabControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor+Tile.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint+ForeColor.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaint.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Drawing.MetroPaintEventArgs.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Forms.MetroForm.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Forms.MetroTaskWindow.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroComponent.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Interfaces.IMetroForm.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroBrushes.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroColors.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroFonts.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBox.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBoxControl.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroMessageBoxProperties.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.MetroPens.datasource" />
+    <None Include="Properties\DataSources\MetroFramework.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\Productos.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\Reporte.datasource" />
+    <None Include="Properties\DataSources\Splash.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.ClienteTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.facturacionTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.facturalTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.facturarTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.facturaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.NombreClientesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.productosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.productTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.QueriesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.ResporteTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.SelectQueryTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet1TableAdapters.usuariosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.ClienteTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.facturacionTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.facturaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.productosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.QueriesTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.DataSet2TableAdapters.usuariosTableAdapter.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\WindowsFormsApplication12.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IAppDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IBarsEffect.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IBattery.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IBatteryPreset.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IBatteryRandomPreset.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IBatterySavedPreset.datasource" />
+    <None Include="Properties\DataSources\WMPLib.ITaskCntrCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPAutoMenuCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPBaseExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPBrandDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPButtonCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPButtonCtrlEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPButtonCtrlEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPButtonCtrlEvents_onclickEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPButtonCtrlEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCDDVDWizardExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCdrom.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCdromBurn.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCdromCollection.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCdromRip.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPClosedCaption.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPClosedCaption2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPControls.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPControls2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPControls3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCore.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCore2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCore3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSlider.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents_ondragbeginEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents_ondragendEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents_onpositionchangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPCustomSliderCtrlEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDiscoExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDMRAVTransportService.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDMRConnectionManagerService.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDMRRenderingControlService.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDownloadCollection.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDownloadItem.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDownloadItem2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDownloadManager.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPDVD.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEditCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEffectsCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEqualizerSettingsCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPError.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPErrorItem.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPErrorItem2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEventObject.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEvents2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEvents3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPEvents4.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPExternalColors.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPFolderMonitorServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPGraphEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPHoverPreviewDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLayoutSettingsDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLayoutSubView.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLayoutView.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLibrary.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLibrary2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLibraryServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLibrarySharingServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPLibraryTreeCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPListBoxCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPListBoxItem.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMedia.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMedia2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMedia3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMediaCollection.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMediaCollection2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMenuCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMetadataPicture.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPMetadataText.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPNetwork.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPNowDoingDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPNowPlayingHelperDispatch.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPObjectExtendedProps.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPOfflineExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayer.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayer2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayer3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayer4.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayerApplication.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayerServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlayerServices2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlaylist.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlaylistArray.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlaylistCollection.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlaylistCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPlaylistCtrlColumn.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPPluginUIHost.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPQuery.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButton.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onblurEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onclickEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_ondblclickEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onfocusEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onkeydownEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onkeypressEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onkeyupEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onmousedownEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onmousemoveEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onmouseoutEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onmouseoverEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_onmouseupEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRegionalButtonEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPRemoteMediaServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSafeBrowser.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSettings.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSettings2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSkinList.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents_ondragbeginEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents_ondragendEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents_onpositionchangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSliderCtrlEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPStringCollection.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPStringCollection2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSubscriptionServiceExternal.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSubscriptionServiceLimited.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSubscriptionServicePlayMedia.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSyncDevice.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSyncDevice2.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSyncDevice3.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPSyncServices.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPTextCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPTheme.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrlEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrlEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrlEvents_onvideoendEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrlEvents_onvideostartEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoCtrlEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPVideoSettingsCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.IWMPWindow.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WindowsMediaPlayer.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WindowsMediaPlayerClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPAutoMenuCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPAutoMenuCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPButtonCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPButtonCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPCore.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPCoreClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPCustomSliderCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPCustomSliderCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEditCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEditCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEffects.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEffectsClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEqualizerSettingsCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPEqualizerSettingsCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPLibraryTreeCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPLibraryTreeCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPListBoxCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPListBoxCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPMenuCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPMenuCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPPlaylistCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPPlaylistCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPRegionalButton.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPRegionalButtonClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPRegionalButtonCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPRegionalButtonCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPSkinList.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPSkinListClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPSliderCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPSliderCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPTextCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPTextCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPVideoCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPVideoCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPVideoSettingsCtrl.datasource" />
+    <None Include="Properties\DataSources\WMPLib.WMPVideoSettingsCtrlClass.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_AudioLanguageChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_BufferingEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_CdromMediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_CurrentItemChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_CurrentMediaItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_CurrentPlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_CurrentPlaylistItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_DisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_DomainChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_DurationUnitChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_EndOfStreamEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_ErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MarkerHitEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionAttributeStringAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionAttributeStringChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionAttributeStringRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionMediaAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaCollectionMediaRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_MediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_ModeChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_NewStreamEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_OpenPlaylistSwitchEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_OpenStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlaylistCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlaylistCollectionPlaylistAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlaylistCollectionPlaylistRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlaylistCollectionPlaylistSetAsDeletedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PlayStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_PositionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_ScriptCommandEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_StatusChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_StringCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPCoreEvents_WarningEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_AudioLanguageChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_BufferingEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromBurnErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromBurnMediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromBurnStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromMediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromRipMediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CdromRipStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_ClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CreatePartnershipCompleteEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CurrentItemChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CurrentMediaItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CurrentPlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_CurrentPlaylistItemAvailableEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceConnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceDisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceEstimationEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceStatusChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceSyncErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DeviceSyncStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DomainChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DoubleClickEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_DurationUnitChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_EndOfStreamEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_ErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_Event.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_FolderScanStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_KeyDownEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_KeyPressEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_KeyUpEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_LibraryConnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_LibraryDisconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MarkerHitEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionAttributeStringAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionAttributeStringChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionAttributeStringRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionMediaAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaCollectionMediaRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MediaErrorEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_ModeChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MouseDownEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MouseMoveEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_MouseUpEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_NewStreamEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_OpenPlaylistSwitchEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_OpenStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlayerDockedStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlayerReconnectEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlaylistChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlaylistCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlaylistCollectionPlaylistAddedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlaylistCollectionPlaylistRemovedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlaylistCollectionPlaylistSetAsDeletedEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PlayStateChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_PositionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_ScriptCommandEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_SinkHelper.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_StatusChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_StringCollectionChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_SwitchedToControlEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_SwitchedToPlayerApplicationEventHandler.datasource" />
+    <None Include="Properties\DataSources\WMPLib._WMPOCXEvents_WarningEventHandler.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final_isologo.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
